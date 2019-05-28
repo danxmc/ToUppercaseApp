@@ -1,0 +1,25 @@
+version: "3"
+
+services:
+  ##########################
+  ### SETUP SERVER CONTAINER
+  ##########################
+  server:
+    build: ./backend
+    environment:
+      - PORT=${PORT}
+      - NODE_ENV=${NODE_ENV}
+    ports:
+      - ${PORT}:${PORT}
+    command: node server.js
+    restart: always
+  ##########################
+  ### SETUP CLIENT CONTAINER
+  ##########################
+  client:
+    build: ./frontend
+    ports:
+      - 80:80
+    links:
+      - server
+    restart: always
