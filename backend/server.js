@@ -7,7 +7,7 @@ const app = express();
 app.use(express.json());
 
 // Use Routes
-app.use('/api/string', require('./routes/api/strings'));
+app.use('/api/strings', require('./routes/api/strings'));
 
 // Serve static assets if in production
 if (process.env.NODE_ENV === 'production') {
