@@ -1,5 +1,5 @@
 # HeliconTestApp
-Recruiting Test App for Helicon
+Simple Uppercase converter using React, and Node/Express
 
 ## How to run the backend
 1. Navigate to the `backend` directory.
