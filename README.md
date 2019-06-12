@@ -1,4 +1,4 @@
-# HeliconTestApp
+# ToUppercaseApp
 Simple Uppercase converter using React, and Node/Express
 
 ## How to run the backend
