@@ -15,7 +15,6 @@ class App extends Component {
   }
 
   handleChange = (e) => {
-    console.log(e);
     this.setState({
         [e.target.id]: e.target.value
     });
@@ -23,7 +22,6 @@ class App extends Component {
 
   handleSubmit = (e) => {
     e.preventDefault();
-    console.log()
     // Post to the backend
     axios
       .post('/api/strings', this.state)
@@ -31,7 +29,6 @@ class App extends Component {
         this.setState({
           newString: res.data.resultString
         });
-        console.log(this.state);
       })
       .catch(err => {
           console.error(err);
